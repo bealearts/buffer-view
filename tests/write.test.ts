@@ -1,7 +1,7 @@
 import BufferView from '../src/BufferView';
 
 test('writeFloat32', () => {
-  const view = new BufferView(new ArrayBuffer(20));
+  const view:BufferView = new BufferView(new ArrayBuffer(20));
   view.writeFloat32(12.0);
   expect(view.position).toBe(4);
   view.writeFloat32(4.0);

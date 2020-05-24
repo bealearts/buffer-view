@@ -57,6 +57,10 @@ export default class BufferView {
     this.dataView.setFloat32(this.incOffset(4), value, this.littleEndian);
   }
 
+  public writeInt32(value: i32): void {
+    this.dataView.setInt32(this.incOffset(4), value, this.littleEndian);
+  }
+
   public writeUint8(value: u8): void {
     this.dataView.setUint8(this.incOffset(1), value);
   }

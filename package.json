@@ -1,7 +1,7 @@
 {
   "name": "buffer-view",
   "version": "0.0.0",
-  "description": "Serial, Hetrogenous access to an ArrayBuffer",
+  "description": "Serial, Heterogeneous access to an ArrayBuffer",
   "main": "index.js",
   "types": "src/index.ts",
   "scripts": {
