@@ -1,0 +1,29 @@
+{
+  "name": "buffer-view",
+  "version": "0.0.0",
+  "description": "Serial, Hetrogenous access to an ArrayBuffer",
+  "main": "index.js",
+  "types": "src/index.ts",
+  "scripts": {
+    "test": "asp",
+    "asbuild:untouched": "asc src/index.ts -b dist/untouched.wasm -t dist/untouched.wat --sourceMap --debug",
+    "asbuild:optimized": "asc src/index.ts -b dist/optimized.wasm -t dist/optimized.wat --sourceMap --optimize",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
+  },
+  "keywords": [
+    "data",
+    "view",
+    "buffer",
+    "binary",
+    "assemblyscript"
+  ],
+  "author": "David Beale",
+  "license": "MIT",
+  "devDependencies": {
+    "@as-pect/cli": "^3.2.3",
+    "assemblyscript": "^0.10.0"
+  },
+  "dependencies": {
+    "@assemblyscript/loader": "^0.10.0"
+  }
+}
