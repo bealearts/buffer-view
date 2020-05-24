@@ -50,6 +50,34 @@ export default class BufferView {
     return this.dataView.getInt8(this.incOffset(1));
   }
 
+  public readInt16(): i16 {
+    return this.dataView.getInt16(this.incOffset(2), this.littleEndian);
+  }
+
+  public readInt32(): i32 {
+    return this.dataView.getInt32(this.incOffset(4), this.littleEndian);
+  }
+
+  public readInt64(): i64 {
+    return this.dataView.getInt64(this.incOffset(8), this.littleEndian);
+  }
+
+  public readUint8(): i8 {
+    return this.dataView.getUint8(this.incOffset(1));
+  }
+
+  public readUint16(): i16 {
+    return this.dataView.getUint16(this.incOffset(2), this.littleEndian);
+  }
+
+  public readUint32(): i32 {
+    return this.dataView.getUint32(this.incOffset(4), this.littleEndian);
+  }
+
+  public readUint64(): i64 {
+    return this.dataView.getUint64(this.incOffset(8), this.littleEndian);
+  }
+
 
   /** Write **/
 

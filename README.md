@@ -26,6 +26,7 @@ view.position; // 6
 import BufferView from 'buffer-view';
 
 const view:BufferView = new BufferView(new ArrayBuffer(10), true);  // littleEndian
+view.writeFloat32(12.0)
 view.writeInt32(12345);
 view.position; // 8
 view.toString();  // "00 00 40 41 39 30 00 00 00 00"
