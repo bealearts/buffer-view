@@ -1,10 +1,10 @@
-import BufferView from './BufferView';
+import SerialDataView from './SerialDataView';
 
-export default BufferView;
+export default SerialDataView;
 
 export const Uint8Array_ID = idof<Uint8Array>();
 
-export function use(buffer: Uint8Array): BufferView {
-  const view: BufferView = BufferView.fromUint8Array(buffer);
+export function use(buffer: Uint8Array): SerialDataView {
+  const view: SerialDataView = SerialDataView.fromUint8Array(buffer);
   return view;
 }

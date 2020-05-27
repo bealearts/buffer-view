@@ -1,7 +1,7 @@
-import BufferView from '../src/BufferView';
+import SerialDataView from '../src/SerialDataView';
 
 test('writeFloat32', () => {
-  const view:BufferView = new BufferView(new ArrayBuffer(20));
+  const view:SerialDataView = new SerialDataView(new ArrayBuffer(20));
 
   view.writeFloat32(12.0);
   expect(view.position).toBe(4);
@@ -12,7 +12,7 @@ test('writeFloat32', () => {
 });
 
 test('writeFloat64', () => {
-  const view:BufferView = new BufferView(new ArrayBuffer(24));
+  const view:SerialDataView = new SerialDataView(new ArrayBuffer(24));
 
   view.writeFloat64(412.0);
   expect(view.position).toBe(8);
@@ -23,7 +23,7 @@ test('writeFloat64', () => {
 });
 
 test('writeInt8', () => {
-  const view:BufferView = new BufferView(new ArrayBuffer(20));
+  const view:SerialDataView = new SerialDataView(new ArrayBuffer(20));
 
   view.writeInt8(<i8>0x12);
   expect(view.position).toBe(1);
@@ -34,7 +34,7 @@ test('writeInt8', () => {
 });
 
 test('writeInt16', () => {
-  const view:BufferView = new BufferView(new ArrayBuffer(20));
+  const view:SerialDataView = new SerialDataView(new ArrayBuffer(20));
 
   view.writeInt16(<i16>123);
   expect(view.position).toBe(2);
@@ -45,7 +45,7 @@ test('writeInt16', () => {
 });
 
 test('writeInt32', () => {
-  const view:BufferView = new BufferView(new ArrayBuffer(20));
+  const view:SerialDataView = new SerialDataView(new ArrayBuffer(20));
 
   view.writeInt32(<i32>123456);
   expect(view.position).toBe(4);
@@ -56,7 +56,7 @@ test('writeInt32', () => {
 });
 
 test('writeInt64', () => {
-  const view:BufferView = new BufferView(new ArrayBuffer(24));
+  const view:SerialDataView = new SerialDataView(new ArrayBuffer(24));
 
   view.writeInt64(<i64>12345600);
   expect(view.position).toBe(8);

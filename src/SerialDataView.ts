@@ -1,9 +1,9 @@
 
-export default class BufferView {
+export default class SerialDataView {
   public position: i32 = 0;
 
-  public static fromByteArray(bytes:Array<u8>):BufferView {
-    const view = new BufferView(new ArrayBuffer(bytes.length));
+  public static fromByteArray(bytes:Array<u8>):SerialDataView {
+    const view = new SerialDataView(new ArrayBuffer(bytes.length));
     for (let i:i32=0; i<bytes.length; i++) {
       view.writeUint8(bytes[i]);
     }
@@ -11,8 +11,8 @@ export default class BufferView {
     return view;
   }
 
-  public static fromUint8Array(bytes:Uint8Array):BufferView {
-    const view = new BufferView(new ArrayBuffer(bytes.byteLength));
+  public static fromUint8Array(bytes:Uint8Array):SerialDataView {
+    const view = new SerialDataView(new ArrayBuffer(bytes.byteLength));
     for (let i:i32=0; i<bytes.length; i++) {
       view.writeUint8(bytes[i]);
     }
