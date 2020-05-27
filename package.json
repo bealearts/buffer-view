@@ -1,6 +1,6 @@
 {
   "name": "serial-data-view",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Serial, Heterogeneous access to an ArrayBuffer",
   "main": "index.mjs",
   "types": "src/index.ts",
