@@ -1,7 +1,9 @@
+import assert from 'assert';
 import SerialDataView from '../index.mjs';
 
 const buffer = Buffer.from('Hello World');
 
 const view = new SerialDataView(buffer);
 
-console.log(view.byteLength, view.readUint8());
+assert(view.byteLength, 11);
+assert(view.readUint8(), 72);

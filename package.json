@@ -2,30 +2,38 @@
   "name": "serial-data-view",
   "version": "0.0.0",
   "description": "Serial, Heterogeneous access to an ArrayBuffer",
-  "type": "module",
   "main": "index.mjs",
   "types": "src/index.ts",
   "scripts": {
-    "test": "asp --verbose",
+    "test": "asp --verbose && npm run build:optimized && npm run test:js",
+    "test:js": "node tests/from-esm.test.mjs",
     "build:untouched": "asc ./node_modules/as-bind/lib/assembly/as-bind.ts src/index.ts -b dist/untouched.wasm -t dist/untouched.wat --sourceMap --debug",
     "build:optimized": "asc ./node_modules/as-bind/lib/assembly/as-bind.ts src/index.ts -b dist/optimized.wasm -t dist/optimized.wat --sourceMap --optimize",
     "build": "npm run build:untouched && npm run build:optimized"
   },
   "keywords": [
+    "serial",
     "data",
     "view",
     "buffer",
     "binary",
-    "assemblyscript"
+    "assemblyscript",
+    "heterogeneous"
   ],
-  "author": "David Beale",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bealearts/serial-data-view.git"
+  },
   "license": "MIT",
+  "author": {
+    "name": "David Beale",
+    "url": "http://bealearts.co.uk/"
+  },
   "devDependencies": {
     "@as-pect/cli": "^3.2.3",
     "assemblyscript": "^0.10.0"
   },
   "dependencies": {
-    "@assemblyscript/loader": "^0.10.0",
-    "as-bind": "^0.3.4"
+    "@assemblyscript/loader": "^0.10.0"
   }
 }
