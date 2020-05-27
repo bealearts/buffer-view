@@ -9,6 +9,7 @@ Serial, Heterogeneous access to an ArrayBuffer
 > * Heterogeneous writing of data
 > * Serial access, current byte position is incremented after each operation
 > * Setting Endianness
+> * Can be called directly from JS
 
 
 ## Usage
