@@ -7,9 +7,10 @@ const { default: SDV , use, Uint8Array_ID, __release, __retain, __allocArray } =
 
 
 export default class SerialDataView {
-  constructor(buffer) {
+  constructor(buffer, littleEndian = false) {
     const bufferRef = __retain(__allocArray(Uint8Array_ID, buffer));
     const view = SDV.wrap(SDV.fromUint8Array(bufferRef));
+    view.littleEndian = littleEndian;
     __release(bufferRef);
     return view;
   }
