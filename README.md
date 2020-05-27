@@ -32,6 +32,18 @@ view.position; // 8
 view.toString();  // "00 00 40 41 39 30 00 00 00 00"
 ```
 
+### From JS
+```js
+import SerialDataView from 'serial-data-view';
+
+const buffer = Buffer.from('Hello World');
+const view = new SerialDataView(buffer);
+
+view.readUint8(); // 72
+view.readUint8(); // 101
+view.position; // 2
+```
+
 
 ## Install
 ```shell

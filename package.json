@@ -2,7 +2,8 @@
   "name": "serial-data-view",
   "version": "0.0.0",
   "description": "Serial, Heterogeneous access to an ArrayBuffer",
-  "main": "index.js",
+  "type": "module",
+  "main": "index.mjs",
   "types": "src/index.ts",
   "scripts": {
     "test": "asp --verbose",
