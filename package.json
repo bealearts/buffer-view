@@ -7,8 +7,8 @@
   "scripts": {
     "test": "asp --verbose && npm run build:optimized && npm run test:js",
     "test:js": "node tests/from-esm.test.mjs",
-    "build:untouched": "asc ./node_modules/as-bind/lib/assembly/as-bind.ts src/index.ts -b dist/untouched.wasm -t dist/untouched.wat --sourceMap --debug",
-    "build:optimized": "asc ./node_modules/as-bind/lib/assembly/as-bind.ts src/index.ts -b dist/optimized.wasm -t dist/optimized.wat --sourceMap --optimize",
+    "build:untouched": "asc src/index.ts -b dist/untouched.wasm -t dist/untouched.wat --sourceMap --debug",
+    "build:optimized": "asc src/index.ts -b dist/optimized.wasm -t dist/optimized.wat --sourceMap --optimize",
     "build": "npm run build:untouched && npm run build:optimized"
   },
   "keywords": [
