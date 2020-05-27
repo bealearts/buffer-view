@@ -11,6 +11,16 @@ export default class BufferView {
     return view;
   }
 
+  public static fromUint8Array(bytes:Uint8Array):BufferView {
+    const view = new BufferView(new ArrayBuffer(bytes.byteLength));
+    for (let i:i32=0; i<bytes.length; i++) {
+      view.writeUint8(bytes[i]);
+    }
+    view.position = 0;
+    return view;
+  }
+
+
   public constructor(
     buffer: ArrayBuffer,
     littleEndian: bool = false,
@@ -23,6 +33,10 @@ export default class BufferView {
 
   public get buffer(): ArrayBuffer {
     return this.dataView.buffer;
+  }
+
+  public get byteLength(): i32 {
+    return this.dataView.byteLength;
   }
 
   public toString(): string {
@@ -62,19 +76,19 @@ export default class BufferView {
     return this.dataView.getInt64(this.incOffset(8), this.littleEndian);
   }
 
-  public readUint8(): i8 {
+  public readUint8(): u8 {
     return this.dataView.getUint8(this.incOffset(1));
   }
 
-  public readUint16(): i16 {
+  public readUint16(): u16 {
     return this.dataView.getUint16(this.incOffset(2), this.littleEndian);
   }
 
-  public readUint32(): i32 {
+  public readUint32(): u32 {
     return this.dataView.getUint32(this.incOffset(4), this.littleEndian);
   }
 
-  public readUint64(): i64 {
+  public readUint64(): u64 {
     return this.dataView.getUint64(this.incOffset(8), this.littleEndian);
   }
 
