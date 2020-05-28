@@ -10,7 +10,8 @@
     "test:js": "node tests/from-esm.test.mjs",
     "build:untouched": "asc src/index.ts -b dist/untouched.wasm -t dist/untouched.wat --sourceMap --debug",
     "build:optimized": "asc src/index.ts -b dist/optimized.wasm -t dist/optimized.wat --sourceMap --optimize",
-    "build": "npm run build:untouched && npm run build:optimized"
+    "build": "npm run build:untouched && npm run build:optimized",
+    "docs": "typedoc --tsconfig tsconfig-docs.json --mode file --name \"SerialDataView API\" --includeVersion --out ./docs --ignoreCompilerErrors --excludeNotExported --excludePrivate -theme minimal --excludeExternals --exclude **/std/** --includeDeclarations"
   },
   "keywords": [
     "serial",
@@ -32,7 +33,9 @@
   },
   "devDependencies": {
     "@as-pect/cli": "^3.2.3",
-    "assemblyscript": "^0.10.0"
+    "assemblyscript": "^0.10.0",
+    "typedoc": "^0.17.7",
+    "typescript": "^3.9.3"
   },
   "dependencies": {
     "@assemblyscript/loader": "^0.10.0"

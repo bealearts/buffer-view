@@ -2,17 +2,20 @@
 
 Serial, Heterogeneous access to an ArrayBuffer
 
-> AssemblyScript library to work with binary data
+> [AssemblyScript](https://docs.assemblyscript.org/) library to work with binary data
 >
 >  Supports;
 > * Heterogeneous reading of data
 > * Heterogeneous writing of data
 > * Serial access, current byte position is incremented after each operation
 > * Setting Endianness
-> * Can be called directly from JS
+> * Can be called directly from JavaScript
 
 
 ## Usage
+
+### From AssemblyScript
+
 ```ts
 import SerialDataView from 'serial-data-view';
 
@@ -33,7 +36,7 @@ view.position; // 8
 view.toString();  // "00 00 40 41 39 30 00 00 00 00"
 ```
 
-### From JS
+### From JavaScript
 ```js
 import SerialDataView from 'serial-data-view';
 
