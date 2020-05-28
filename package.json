@@ -5,7 +5,8 @@
   "main": "index.mjs",
   "types": "src/index.ts",
   "scripts": {
-    "test": "asp --verbose && npm run build:optimized && npm run test:js",
+    "test": "npm run test:as && npm run build:optimized && npm run test:js",
+    "test:as": "asp --verbose",
     "test:js": "node tests/from-esm.test.mjs",
     "build:untouched": "asc src/index.ts -b dist/untouched.wasm -t dist/untouched.wat --sourceMap --debug",
     "build:optimized": "asc src/index.ts -b dist/optimized.wasm -t dist/optimized.wat --sourceMap --optimize",
