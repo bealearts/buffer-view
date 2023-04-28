@@ -34,7 +34,7 @@
   "devDependencies": {
     "@as-pect/cli": "^3.2.3",
     "assemblyscript": "^0.10.0",
-    "typedoc": "^0.17.7",
+    "typedoc": "^0.24.6",
     "typescript": "^3.9.3"
   },
   "dependencies": {
